@@ -5,7 +5,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -23,6 +22,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
 import com.example.newsportal.models.Article;
+
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
@@ -107,7 +107,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>{
             super(itemView);
 
             itemView.setOnClickListener(this);
-            title = itemView.findViewById(R.id.title);
+            title = itemView
+                    .findViewById(R.id.title);
             desc = itemView.findViewById(R.id.desc);
             author = itemView.findViewById(R.id.author);
             published_at = itemView.findViewById(R.id.publishedAt);
